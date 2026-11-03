@@ -1,6 +1,6 @@
 # consultor-primeiro
 
-Skill e agentes para o Claude Code que separam **pensar** de **executar**: um agente forte (Opus) analisa e monta o plano; agentes mais baratos (Sonnet e Haiku) executam. O Claude principal coordena e confere o resultado.
+Skill e agentes para o Claude Code que separam **pensar** de **executar**: um agente master (Fable, se o seu plano liberar; senão Opus) analisa, monta o plano e, quando julga necessário, também executa; agentes mais baratos (Sonnet e Haiku) executam o resto. O Claude principal coordena e confere o resultado.
 
 Uso: digite `/consultor-primeiro` seguido da tarefa.
 
@@ -9,7 +9,7 @@ Uso: digite `/consultor-primeiro` seguido da tarefa.
 | Arquivo | Papel | Modelo | Ferramentas |
 |---|---|---|---|
 | `skills/consultor-primeiro/SKILL.md` | Fluxo: briefing, estratégia, delegação, escalada, conferência | — | — |
-| `agents/consultor.md` | Diagnóstico, estratégia e tabela de tarefas delegáveis | opus | Read, Grep, Glob (somente leitura) |
+| `agents/consultor.md` | Agente master: diagnóstico, estratégia, tabela de tarefas delegáveis; executa quando julga necessário | fable → opus (a skill tenta Fable e cai para Opus; padrão do arquivo: opus) | Read, Grep, Glob, Bash, Edit, Write |
 | `agents/trabalhador.md` | Implementa, testa, corrige e redige | sonnet | Read, Grep, Glob, Bash, Edit, Write |
 | `agents/tarefa-simples.md` | Busca, lista, conta e organiza (somente leitura) | haiku | Read, Grep, Glob, Bash |
 
@@ -48,7 +48,7 @@ Dê objetivo, caminhos de arquivos, restrições e o que já foi tentado. Em tar
 
 ## Quando não usar
 
-A skill **sempre** consulta o Opus antes de executar. Em tarefas triviais (renomear um arquivo, responder uma pergunta curta) isso custa mais do que fazer direto. Use-a para trabalho médio ou grande. A skill não mede nem garante economia.
+A skill **sempre** consulta o agente master (Fable ou Opus) antes de executar. Em tarefas triviais (renomear um arquivo, responder uma pergunta curta) isso custa mais do que fazer direto. Use-a para trabalho médio ou grande. A skill não mede nem garante economia.
 
 ## Sigilo e limitações
 

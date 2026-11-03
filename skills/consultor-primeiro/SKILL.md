@@ -6,7 +6,7 @@ description: Concentra análise e estratégia em um agente forte e delega a exec
 
 ## Papéis
 
-- **consultor** (agente forte, somente leitura; Fable se o plano liberar, senão Opus): decide a abordagem, decompõe o trabalho em tarefas delegáveis e resolve dúvidas estratégicas.
+- **consultor** (agente master; Fable se o plano liberar, senão Opus): decide a abordagem, decompõe o trabalho em tarefas delegáveis e resolve dúvidas estratégicas. Por padrão só analisa, mas pode executar ele mesmo quando julgar necessário (tarefa pequena, decisão e execução inseparáveis, delegação que custaria mais). Quando executa, o principal confere o resultado como confere o de qualquer executor.
 - **tarefa-simples** (agente econômico, somente leitura): busca, lista, conta, extrai e organiza informação.
 - **trabalhador** (agente econômico): implementa, testa, corrige e redige conforme o plano.
 - **principal** (você): monta o briefing, distribui as tarefas, acompanha dependências, confere as evidências e entrega. Não refaz a análise do consultor sem motivo novo.
@@ -50,7 +50,7 @@ Se a tarefa for projetar (por exemplo um pipeline de agentes, um sistema ou uma 
 - O consultor define componentes e papéis, modelo sugerido (forte ou local) por componente, entrada e saída de cada etapa, pontos de revisão, plano de falha e fases de construção.
 - Em pipelines de vários agentes, exija: um **contrato** por etapa (o que recebe e devolve, em que formato); **portas de revisão** nas etapas críticas; regra de parada quando o revisor reprovar (limite de ciclos e quem decide); registro do que cada agente fez.
 - Marque onde passa dado sigiloso e qual componente o vê.
-- O consultor não grava arquivos: o principal (ou o trabalhador) grava a especificação em Markdown na pasta do projeto, com o decidido, o que ficou em aberto e a fase 1 pronta para começar.
+- O principal, o trabalhador ou o próprio consultor (se optar por executar) grava a especificação em Markdown na pasta do projeto, com o decidido, o que ficou em aberto e a fase 1 pronta para começar.
 - Só construa depois de o usuário aprovar a especificação. Se ele pedir a construção, cada fase vira uma tarefa delegável com critério de conclusão testável.
 
 ## Regras de segurança (padrão; ajuste às suas necessidades)
