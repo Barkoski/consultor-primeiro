@@ -1,0 +1,7 @@
+.env
+.env.*
+*.log
+*.local.json
+Thumbs.db
+Desktop.ini
+backup-*/
