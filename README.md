@@ -4,6 +4,8 @@
 
 # 🧠 consultor-primeiro
 
+> 🧩 **Peça independente.** Use este repositório sozinho ou junto com os outros: [advocacia-previdenciaria-barkoski](https://github.com/Barkoski/advocacia-previdenciaria-barkoski) (análise, estratégia e redação em Direito Previdenciário) · [dossie](https://github.com/Barkoski/dossie) (organização de prova em dossiê estruturado e auditável). Cada um nasceu com uma proposta própria.
+
 > **Você escreve a tarefa. Um agente forte planeja. Agentes mais baratos executam. Tudo conferido no final.**
 > Skill para o **Claude Code**. Serve para **direito** ⚖️ e para **qualquer outra coisa** 💻.
 
