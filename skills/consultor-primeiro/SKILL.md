@@ -6,7 +6,7 @@ description: Concentra análise e estratégia em um agente forte e delega a exec
 
 ## Papéis
 
-- **consultor** (agente forte, somente leitura): decide a abordagem, decompõe o trabalho em tarefas delegáveis e resolve dúvidas estratégicas.
+- **consultor** (agente forte, somente leitura; Fable se o plano liberar, senão Opus): decide a abordagem, decompõe o trabalho em tarefas delegáveis e resolve dúvidas estratégicas.
 - **tarefa-simples** (agente econômico, somente leitura): busca, lista, conta, extrai e organiza informação.
 - **trabalhador** (agente econômico): implementa, testa, corrige e redige conforme o plano.
 - **principal** (você): monta o briefing, distribui as tarefas, acompanha dependências, confere as evidências e entrega. Não refaz a análise do consultor sem motivo novo.
@@ -23,7 +23,7 @@ Envie ao consultor: objetivo e resultado esperado; contexto, arquivos (com camin
 
 ## 2. Estratégia
 
-Consulte o consultor antes de implementar, mesmo em tarefa simples. Peça a resposta no formato do próprio agente `consultor` (diagnóstico, estratégia, o que não fazer, tarefas delegáveis, verificações e confiança) e inclua esse pedido no briefing.
+Consulte o consultor antes de implementar, mesmo em tarefa simples. **Escolha do modelo:** o agente não consegue saber sozinho o que o plano do usuário libera, então o principal decide ao chamá-lo. Chame o consultor com `model: "fable"` (o mais forte). Se a chamada falhar por modelo indisponível ou não liberado no plano, repita a mesma chamada com `model: "opus"`. Se `opus` também falhar, use o modelo padrão do agente e avise o usuário. Diga ao usuário, em uma linha, qual modelo foi usado. Peça a resposta no formato do próprio agente `consultor` (diagnóstico, estratégia, o que não fazer, tarefas delegáveis, verificações e confiança) e inclua esse pedido no briefing.
 
 O principal resume o plano em poucas linhas e começa a executar dentro da autorização existente; apresentar o plano não exige aprovação. Não troque a estratégia sem nova evidência ou orientação do usuário.
 
