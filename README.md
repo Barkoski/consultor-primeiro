@@ -36,15 +36,50 @@ O script copia os arquivos para `~\.claude\` e, antes de sobrescrever, salva os 
 
 ## Como usar
 
-```
-/consultor-primeiro Corrija o erro de login em C:\projetos\meu-app. O erro é: ...
-```
+A skill é **universal**: ela não tem uma tarefa fixa. Você escreve a tarefa em linguagem natural depois de `/consultor-primeiro`, e o contexto (arquivos, área, restrições) define o que o consultor planeja e quem executa. Serve para código, jurídico, documentos, pesquisa, automações e projetos.
+
+### Exemplo jurídico
 
 ```
-/consultor-primeiro Projete um pipeline de agentes com 2 orquestradores, 1 revisor e 12 modelos locais. Entregue só a especificação.
+/consultor-primeiro Preciso que você analise o processo em C:\Casos\caso-001\autos.pdf
+(aposentadoria por tempo de contribuição, indeferida pelo INSS). Quero: cronologia dos
+fatos relevantes, requisitos atendidos e não atendidos, provas que faltam, pontos fracos
+da tese e o contra-argumento provável do INSS. Cite a página de cada informação.
+Se faltar dado, diga "não consta". Entregue um relatório em Markdown e, se fizer sentido,
+uma minuta de petição inicial para eu revisar.
 ```
 
-Dê objetivo, caminhos de arquivos, restrições e o que já foi tentado. Em tarefas de projeto, o resultado é uma especificação em Markdown; a construção só começa depois que você aprova.
+Como o consultor trabalha aqui: lê o material, define a abordagem, entrega a análise e distribui o restante (por exemplo, `tarefa-simples` para extrair datas e páginas, `trabalhador` para redigir a minuta). O principal confere as citações antes de entregar. O resultado é minuta para revisão do advogado.
+
+Cuidado com o sigilo: o conteúdo enviado é processado na nuvem do serviço do Claude. Use dados anonimizados ou apenas o que você decidiu conscientemente que pode ser processado.
+
+Variações, no mesmo modelo:
+
+```
+/consultor-primeiro Analise este processo administrativo e me dê o resumo dos prazos
+e das exigências pendentes, com a fonte de cada item.
+```
+
+### Exemplo de desenvolvimento
+
+```
+/consultor-primeiro Corrija o erro de login em C:\projetos\meu-app. O erro é: "401 ao
+renovar o token". Já tentei limpar o cache e reiniciar o servidor. Rode os testes no fim
+e me diga o que não foi verificado.
+```
+
+### Exemplo de projeto (só planejar)
+
+```
+/consultor-primeiro Projete um pipeline de agentes com 2 orquestradores, 1 revisor e
+12 modelos locais. Entregue só a especificação.
+```
+
+### Dicas
+
+- Dê objetivo, caminhos de arquivos, restrições e o que já foi tentado.
+- Diga o formato do resultado (relatório, tabela, código, minuta).
+- Em tarefas de projeto, o resultado é uma especificação em Markdown; a construção só começa depois que você aprova.
 
 ## Quando não usar
 
