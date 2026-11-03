@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-label="consultor-primeiro: um agente forte planeja, agentes econômicos executam">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b7fa6"/>
+      <stop offset="1" stop-color="#6aa59a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="260" rx="20" fill="url(#bg)"/>
+  <text x="450" y="78" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">🧠 consultor-primeiro</text>
+  <text x="450" y="116" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#f2f7f6">Um agente forte pensa. Agentes econômicos executam.</text>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" text-anchor="middle" fill="#2f4a5f">
+    <rect x="70" y="150" width="220" height="70" rx="14" fill="#f4f1e8"/>
+    <text x="180" y="180" font-size="26">🧠</text>
+    <text x="180" y="206" font-weight="600">Consultor (Fable/Opus)</text>
+    <rect x="340" y="150" width="220" height="70" rx="14" fill="#f4f1e8"/>
+    <text x="450" y="180" font-size="26">🛠️</text>
+    <text x="450" y="206" font-weight="600">Trabalhador (Sonnet)</text>
+    <rect x="610" y="150" width="220" height="70" rx="14" fill="#f4f1e8"/>
+    <text x="720" y="180" font-size="26">🔎</text>
+    <text x="720" y="206" font-weight="600">Tarefa simples (Haiku)</text>
+  </g>
+  <g stroke="#f4f1e8" stroke-width="4" stroke-linecap="round">
+    <line x1="296" y1="185" x2="334" y2="185"/>
+    <line x1="566" y1="185" x2="604" y2="185"/>
+  </g>
+</svg>
