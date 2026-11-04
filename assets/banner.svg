@@ -1,26 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-label="consultor-primeiro: um agente forte planeja, agentes econômicos executam">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5b7fa6"/>
-      <stop offset="1" stop-color="#6aa59a"/>
-    </linearGradient>
-  </defs>
-  <rect width="900" height="260" rx="20" fill="url(#bg)"/>
-  <text x="450" y="78" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">🧠 consultor-primeiro</text>
-  <text x="450" y="116" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#f2f7f6">Um agente forte pensa. Agentes econômicos executam.</text>
-  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" text-anchor="middle" fill="#2f4a5f">
-    <rect x="70" y="150" width="220" height="70" rx="14" fill="#f4f1e8"/>
-    <text x="180" y="180" font-size="26">🧠</text>
-    <text x="180" y="206" font-weight="600">Consultor (Fable/Opus)</text>
-    <rect x="340" y="150" width="220" height="70" rx="14" fill="#f4f1e8"/>
-    <text x="450" y="180" font-size="26">🛠️</text>
-    <text x="450" y="206" font-weight="600">Trabalhador (Sonnet)</text>
-    <rect x="610" y="150" width="220" height="70" rx="14" fill="#f4f1e8"/>
-    <text x="720" y="180" font-size="26">🔎</text>
-    <text x="720" y="206" font-weight="600">Tarefa simples (Haiku)</text>
-  </g>
-  <g stroke="#f4f1e8" stroke-width="4" stroke-linecap="round">
-    <line x1="296" y1="185" x2="334" y2="185"/>
-    <line x1="566" y1="185" x2="604" y2="185"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-label="consultor-primeiro: Estratégia antes da execução. Conferência antes da entrega.">
+<rect width="1200" height="380" rx="24" fill="#f3f1eb"/><path d="M895 0H1176Q1200 0 1200 24V356Q1200 380 1176 380H895Z" fill="#5c8094"/>
+<circle cx="1070" cy="105" r="130" fill="none" stroke="#fff" stroke-opacity=".18"/><circle cx="1070" cy="105" r="88" fill="none" stroke="#fff" stroke-opacity=".23"/>
+<path d="M970 260h130m-105 22h105m-80 22h80" stroke="#fff" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/>
+<g font-family="Segoe UI,Arial,sans-serif"><text x="52" y="57" font-size="16" letter-spacing="2.5" font-weight="600" fill="#5c8094">ORQUESTRAÇÃO DE AGENTES</text>
+<text x="52" y="127" font-size="43" font-weight="700" fill="#304959">consultor-primeiro</text><text x="52" y="171" font-size="22" fill="#536775">Estratégia antes da execução. Conferência antes da entrega.</text>
+<path d="M52 202h770" stroke="#d6dbd5"/><text x="52" y="244" font-size="18" fill="#536775">LUCAS BARKOSKI</text><text x="52" y="275" font-size="18" fill="#536775">Ferramentas para ler, organizar e trabalhar melhor.</text>
+<rect x="52" y="309" width="370" height="35" rx="17" fill="#e4e9e3"/><text x="72" y="332" font-size="16" fill="#3e5c5c">github.com/Barkoski</text><text x="947" y="166" font-size="63" font-weight="600" fill="#fff">B.</text></g></svg>
