@@ -1,15 +1,27 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="consultor-primeiro: um agente forte pensa, agentes econômicos executam" width="100%">
+  <img src="assets/banner.svg" alt="consultor-primeiro — Estratégia antes da execução. Conferência antes da entrega." width="100%">
+</p>
+
+<p align="center">
+<img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-5c8094">
+<img alt="3 agentes + principal" src="https://img.shields.io/badge/3%20agentes%20%2B%20principal-5c8094">
+<img alt="MIT" src="https://img.shields.io/badge/MIT-5c8094">
 </p>
 
 # 🧠 consultor-primeiro
 
-> 🧩 **Peça independente.** Use este repositório sozinho ou junto com os outros: [advocacia-previdenciaria-barkoski](https://github.com/Barkoski/advocacia-previdenciaria-barkoski) (análise, estratégia e redação em Direito Previdenciário) · [dossie](https://github.com/Barkoski/dossie) (organização de prova em dossiê estruturado e auditável). Cada um nasceu com uma proposta própria.
+> **Um consultor define a abordagem; agentes executam; o principal confere.** Skill para Claude Code, com exemplos jurídicos e técnicos.
 
-> **Você escreve a tarefa. Um agente forte planeja. Agentes mais baratos executam. Tudo conferido no final.**
-> Skill para o **Claude Code**. Serve para **direito** ⚖️ e para **qualquer outra coisa** 💻.
+Criado por **[Lucas Barkoski](https://github.com/Barkoski)**.
 
-## ⚡ Como usar (10 segundos)
+**Explore:** [📚 Documentação](#documentacao) · [⚡ Como usar](#secao-1) · [📑 Exemplos (escolha sua aba)](#secao-2) · [🧩 Quem faz o quê](#secao-3) · [📥 Instalação](#secao-4)
+
+<p align="center">
+  <img src="assets/fluxo.svg" alt="Definir a tarefa → Consultar → Executar → Conferir" width="100%">
+</p>
+
+<a id="secao-1"></a>
+## ⚡ Como usar
 
 Digite `/consultor-primeiro` e, na frente, escreva o que você quer, com suas palavras:
 
@@ -21,6 +33,7 @@ Digite `/consultor-primeiro` e, na frente, escreva o que você quer, com suas pa
 
 ---
 
+<a id="secao-2"></a>
 ## 📑 Exemplos (escolha sua aba)
 
 <details open>
@@ -52,7 +65,7 @@ revisar. Marque com [VERIFICAR] o que depender de confirmação minha.
 fracos e o contra-argumento provável do INSS ou do juízo.
 ```
 
-**O que acontece por trás:** o consultor lê e define o caminho; um agente barato extrai datas e páginas; outro redige a minuta; o Claude principal confere as citações antes de entregar.
+**O que acontece por trás:** o consultor define a abordagem; os executores necessários recebem tarefas delimitadas; o principal confere o resultado. O consultor também pode executar quando isso for mais adequado. A conferência não substitui a revisão do advogado.
 
 > ⚠️ **Sigilo:** o que você envia é processado na nuvem do serviço do Claude. Use dados anonimizados, ou apenas o que você decidiu conscientemente que pode ser processado.
 > ⚠️ **Tudo é minuta** para revisão do advogado. Confira as fontes.
@@ -96,6 +109,7 @@ AAAA-MM-DD_nome.pdf. Teste com 3 arquivos de exemplo antes de me entregar.
 
 ---
 
+<a id="secao-3"></a>
 ## 🧩 Quem faz o quê
 
 | Quem | Papel | Modelo | Ferramentas |
@@ -107,6 +121,7 @@ AAAA-MM-DD_nome.pdf. Teste com 3 arquivos de exemplo antes de me entregar.
 
 A skill tenta o Fable e, se o plano não liberar, repete com o Opus. Arquivos: `skills/consultor-primeiro/SKILL.md` e `agents/*.md`.
 
+<a id="secao-4"></a>
 ## 📥 Instalação
 
 ### Sem terminal (recomendado)
@@ -128,15 +143,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 
 O script copia os arquivos para `~\.claude\` e, antes de sobrescrever, salva os existentes em `~\.claude\backup-consultor-<data-hora>\`. O bypass vale só para esse comando.
 
+<a id="secao-5"></a>
 ## 💡 Dicas
 
 - Diga o **objetivo**, onde estão os **arquivos**, as **restrições** e o **formato** do resultado (relatório, tabela, código, minuta).
 - Em tarefas de projeto, o resultado é uma especificação em Markdown; a construção só começa depois que você aprova.
 
+<a id="secao-6"></a>
 ## 🚫 Quando não usar
 
 A skill **sempre** consulta o agente master (Fable ou Opus) antes de executar. Em tarefas triviais (renomear um arquivo, responder uma pergunta curta) isso custa mais do que fazer direto. Use-a para trabalho médio ou grande. A skill não mede nem garante economia.
 
+<a id="secao-7"></a>
 ## 🔒 Sigilo e limitações
 
 - Os subagentes rodam no mesmo serviço do Claude Code, na nuvem. As regras de sigilo do texto são instruções ao modelo, não uma barreira técnica: **não cole dados de clientes ou segredos** sem decidir conscientemente que podem ser processados.
@@ -146,6 +164,18 @@ A skill **sempre** consulta o agente master (Fable ou Opus) antes de executar. E
 - A seção "Regras de segurança" da skill traz um padrão voltado a trabalho jurídico (não inventar, sigilo, minuta). Edite-a para o seu contexto.
 - Modelos: aliases `fable`, `opus`, `sonnet` e `haiku`, que precisam estar disponíveis no seu plano.
 
+
+<a id="documentacao"></a>
+## 📚 Links para continuar
+
+- [Fluxo da skill](skills/consultor-primeiro/SKILL.md)
+- [Consultor](agents/consultor.md)
+- [Trabalhador](agents/trabalhador.md)
+- [Tarefa simples](agents/tarefa-simples.md)
+- [Instalador com backup](install.ps1)
+
+
+<a id="secao-8"></a>
 ## 📄 Licença
 
 MIT. Veja `LICENSE`.
