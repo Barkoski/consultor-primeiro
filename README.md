@@ -1,181 +1,111 @@
-<p align="center">
-  <img src="assets/banner.svg" alt="consultor-primeiro — Estratégia antes da execução. Conferência antes da entrega." width="100%">
-</p>
+<p align="center"><img src="assets/banner.svg" alt="Consultor primeiro: estratégia antes da execução, conferência antes da entrega" width="100%"></p>
 
-<p align="center">
-<img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-5c8094">
-<img alt="3 agentes + principal" src="https://img.shields.io/badge/3%20agentes%20%2B%20principal-5c8094">
-<img alt="MIT" src="https://img.shields.io/badge/MIT-5c8094">
-</p>
+<p align="center"><strong>Um fluxo de trabalho com agentes para o Claude Code.</strong><br>O consultor define a abordagem, os agentes executam e o responsável pela sessão confere a entrega.</p>
 
-# 🧠 consultor-primeiro
-
-> **Um consultor define a abordagem; agentes executam; o principal confere.** Skill para Claude Code, com exemplos jurídicos e técnicos.
-
-Criado por **[Lucas Barkoski](https://github.com/Barkoski)**.
-
-**Explore:** [📚 Documentação](#documentacao) · [⚡ Como usar](#secao-1) · [📑 Exemplos (escolha sua aba)](#secao-2) · [🧩 Quem faz o quê](#secao-3) · [📥 Instalação](#secao-4)
-
-<p align="center">
-  <img src="assets/fluxo.svg" alt="Definir a tarefa → Consultar → Executar → Conferir" width="100%">
-</p>
-
-<a id="secao-1"></a>
-## ⚡ Como usar
-
-Digite `/consultor-primeiro` e, na frente, escreva o que você quer, com suas palavras:
-
-```
-/consultor-primeiro <diga aqui a tarefa, onde estão os arquivos e o resultado que você quer>
-```
-
-É só isso. O contexto da sua frase define o que ele faz.
+<p align="center"><a href="#comece-aqui">Comece aqui</a> · <a href="#como-funciona">Como funciona</a> · <a href="#exemplos">Exemplos</a> · <a href="#instalação">Instalação</a> · <a href="#limites-e-cuidados">Limites e cuidados</a></p>
 
 ---
 
-<a id="secao-2"></a>
-## 📑 Exemplos (escolha sua aba)
+## Comece aqui
 
-<details open>
-<summary><h3>⚖️ Aba 1: Jurídico</h3></summary>
+Depois de instalar a skill e os agentes, abra uma nova sessão do Claude Code e escreva:
 
-**1. Analisar um processo**
-```
-/consultor-primeiro Analise o processo em C:\Casos\caso-001\autos.pdf (aposentadoria por
-tempo de contribuição, indeferida pelo INSS). Quero: cronologia dos fatos, requisitos
-atendidos e não atendidos, provas que faltam, pontos fracos da tese e o contra-argumento
-provável do INSS. Cite a página de cada informação. Se faltar dado, diga "não consta".
+```text
+/consultor-primeiro Descreva a tarefa, onde estão os arquivos e o resultado esperado.
 ```
 
-**2. Processo administrativo: prazos e pendências**
-```
-/consultor-primeiro Analise este processo administrativo e me dê os prazos e as exigências
-pendentes, com a fonte de cada item.
-```
+Inclua restrições, tentativas anteriores e erros relevantes quando existirem. Quanto mais claro o objetivo, mais útil será o briefing para o consultor.
 
-**3. Redigir uma minuta**
-```
-/consultor-primeiro Com base na análise acima, redija uma minuta de petição inicial para eu
-revisar. Marque com [VERIFICAR] o que depender de confirmação minha.
-```
+## Como funciona
 
-**4. Revisar uma peça e achar os pontos fracos**
-```
-/consultor-primeiro Revise a petição em C:\Casos\caso-001\peticao.docx. Aponte os pontos
-fracos e o contra-argumento provável do INSS ou do juízo.
-```
+<p align="center"><img src="assets/fluxo.svg" alt="Briefing, estratégia, execução e conferência" width="100%"></p>
 
-**O que acontece por trás:** o consultor define a abordagem; os executores necessários recebem tarefas delimitadas; o principal confere o resultado. O consultor também pode executar quando isso for mais adequado. A conferência não substitui a revisão do advogado.
+1. **Briefing:** o agente principal reúne o objetivo e as informações necessárias.
+2. **Estratégia:** o consultor examina o problema e indica a abordagem e as tarefas delegáveis.
+3. **Execução:** os agentes necessários trabalham dentro do escopo definido. O consultor também pode executar quando considerar adequado.
+4. **Conferência:** o agente principal verifica o resultado e informa o que foi ou não validado.
 
-> ⚠️ **Sigilo:** o que você envia é processado na nuvem do serviço do Claude. Use dados anonimizados, ou apenas o que você decidiu conscientemente que pode ser processado.
-> ⚠️ **Tudo é minuta** para revisão do advogado. Confira as fontes.
+Se um papel não estiver disponível, a skill orienta informar isso antes de continuar. Para tarefas de projeto ou arquitetura, o resultado inicial é uma especificação; a construção depende da aprovação do usuário.
 
-</details>
+### Papéis
 
-<details open>
-<summary><h3>💻 Aba 2: Fora do jurídico</h3></summary>
+| Papel | Responsabilidade | Modelo configurado |
+| --- | --- | --- |
+| **Consultor** | Diagnóstico, estratégia e, quando adequado, execução | Opus; a skill orienta tentar Fable antes, quando disponível |
+| **Trabalhador** | Implementação, testes, correções e redação | Sonnet |
+| **Tarefa simples** | Busca, listagem e organização de informações, em modo somente leitura | Haiku |
+| **Principal** | Briefing, distribuição, conferência e entrega | Modelo da sessão |
 
-**1. Consertar um erro em um programa**
-```
-/consultor-primeiro Corrija o erro de login em C:\projetos\meu-app. O erro é "401 ao renovar
-o token". Já tentei limpar o cache. Rode os testes no fim e diga o que não foi verificado.
-```
+A disponibilidade e o custo dependem do plano e da configuração. A skill não mede nem garante economia.
 
-**2. Planejar um projeto (só o plano, sem construir)**
-```
-/consultor-primeiro Projete um pipeline de agentes com 2 orquestradores, 1 revisor e 12
-modelos locais. Entregue só a especificação.
+## Exemplos
+
+**Analisar um processo**
+
+```text
+/consultor-primeiro Analise os documentos indicados. Organize a cronologia,
+os requisitos, as provas que faltam e os pontos fracos da tese. Cite a origem
+de cada informação e indique o que não consta nos documentos.
 ```
 
-**3. Organizar e resumir documentos**
-```
-/consultor-primeiro Leia os arquivos da pasta C:\Docs\contratos, liste em uma tabela o
-vencimento e o valor de cada contrato e destaque os que vencem em 90 dias.
-```
+**Revisar uma peça**
 
-**4. Pesquisar e comparar opções**
-```
-/consultor-primeiro Compare 3 opções de hospedagem para um site de escritório, com custo,
-vantagens e riscos. Recomende uma e explique por quê.
+```text
+/consultor-primeiro Revise a petição indicada. Aponte os pontos fracos,
+o provável contra-argumento do INSS ou do juízo e o que preciso confirmar.
 ```
 
-**5. Automatizar uma rotina**
+**Corrigir um programa**
+
+```text
+/consultor-primeiro Corrija o erro de login no projeto indicado. O erro ocorre
+ao renovar o token. Verifique a causa, rode os testes adequados e informe
+as limitações da verificação.
 ```
-/consultor-primeiro Crie um script que renomeie os PDFs da pasta C:\Entrada pelo padrão
-AAAA-MM-DD_nome.pdf. Teste com 3 arquivos de exemplo antes de me entregar.
+
+**Planejar uma solução**
+
+```text
+/consultor-primeiro Projete uma automação para organizar documentos.
+Entregue uma especificação com etapas, riscos e verificações, sem construir.
 ```
 
-</details>
+## Instalação
 
----
+### Pelo Explorador de Arquivos
 
-<a id="secao-3"></a>
-## 🧩 Quem faz o quê
+1. No topo do repositório, clique em **Code → Download ZIP** e extraia o arquivo.
+2. Abra o Explorador de Arquivos e cole `%USERPROFILE%\.claude` na barra de endereço.
+3. Copie a pasta `skills\consultor-primeiro` do pacote para `.claude\skills\`.
+4. Copie os três arquivos da pasta `agents` do pacote para `.claude\agents\`. Crie as pastas de destino se necessário.
+5. Abra uma nova sessão do Claude Code.
 
-| Quem | Papel | Modelo | Ferramentas |
-|---|---|---|---|
-| 🧠 **consultor** (agente master) | Diagnóstico, estratégia e tarefas para delegar; executa quando julga necessário | Fable, se o seu plano liberar; senão Opus | Read, Grep, Glob, Bash, Edit, Write |
-| 🛠️ **trabalhador** | Implementa, testa, corrige e redige | Sonnet | Read, Grep, Glob, Bash, Edit, Write |
-| 🔎 **tarefa-simples** | Busca, lista, conta e organiza (só leitura) | Haiku | Read, Grep, Glob, Bash |
-| 🎛️ **principal** (o próprio Claude) | Monta o briefing, distribui, confere e entrega | o da sua sessão | — |
+Se já existirem arquivos com os mesmos nomes, guarde uma cópia antes de substituí-los.
 
-A skill tenta o Fable e, se o plano não liberar, repete com o Opus. Arquivos: `skills/consultor-primeiro/SKILL.md` e `agents/*.md`.
+### Com o instalador para Windows
 
-<a id="secao-4"></a>
-## 📥 Instalação
-
-### Sem terminal (recomendado)
-
-1. Nesta página do GitHub, clique em **Code → Download ZIP** e extraia.
-2. Abra `C:\Users\<seu usuário>\.claude\` no Explorador de Arquivos (cole `%USERPROFILE%\.claude` na barra de endereço).
-3. Copie a pasta `skills\consultor-primeiro` para dentro de `.claude\skills\` e os três arquivos de `agents\` para dentro de `.claude\agents\` (crie as pastas se não existirem).
-4. Abra uma sessão nova do Claude Code.
-
-Se já houver arquivos com os mesmos nomes, guarde uma cópia antes de sobrescrever.
-
-### Com o script
-
-Clique com o botão direito em `install.ps1` → **Executar com o PowerShell**, ou rode:
+Na pasta extraída, clique com o botão direito em `install.ps1` e escolha **Executar com o PowerShell**. Também é possível executar:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
-O script copia os arquivos para `~\.claude\` e, antes de sobrescrever, salva os existentes em `~\.claude\backup-consultor-<data-hora>\`. O bypass vale só para esse comando.
+O instalador copia os arquivos para `~\.claude\` e faz backup dos arquivos existentes em uma pasta `backup-consultor-<data-hora>`. A alteração de política vale apenas para esse comando.
 
-<a id="secao-5"></a>
-## 💡 Dicas
+## Limites e cuidados
 
-- Diga o **objetivo**, onde estão os **arquivos**, as **restrições** e o **formato** do resultado (relatório, tabela, código, minuta).
-- Em tarefas de projeto, o resultado é uma especificação em Markdown; a construção só começa depois que você aprova.
+- **Sigilo:** avalie o serviço e a configuração usados antes de compartilhar documentos, dados de clientes ou segredos. As instruções da skill não são uma barreira técnica de privacidade; dados sigilosos não devem ser enviados a serviços externos sem autorização explícita.
+- **Revisão jurídica:** resultados e peças são minutas para revisão do advogado. Confira fatos, fontes, cálculos e fundamentos.
+- **Modelos:** a skill tenta chamar `fable`, depois `opus` e, se ambos falharem, o modelo padrão do agente, informando o usuário. Os aliases e a disponibilidade dependem do ambiente.
+- **Uso adequado:** a consulta inicial acrescenta etapas. Para tarefas triviais, pode ser mais prático trabalhar diretamente. Não há garantia de economia ou de ausência de erros.
+- **Invocação:** a descrição da skill pede uso apenas por `/consultor-primeiro`; o agente consultor também pode ser acionado em outras situações descritas em seu arquivo. Para restringir tecnicamente a invocação da skill, avalie `disable-model-invocation: true` e confirme o comportamento no seu ambiente.
 
-<a id="secao-6"></a>
-## 🚫 Quando não usar
+## Arquivos e documentação
 
-A skill **sempre** consulta o agente master (Fable ou Opus) antes de executar. Em tarefas triviais (renomear um arquivo, responder uma pergunta curta) isso custa mais do que fazer direto. Use-a para trabalho médio ou grande. A skill não mede nem garante economia.
+- [Instruções da skill](skills/consultor-primeiro/SKILL.md)
+- [Agente consultor](agents/consultor.md) · [Trabalhador](agents/trabalhador.md) · [Tarefa simples](agents/tarefa-simples.md)
+- [Instalador com backup](install.ps1) · [Licença MIT](LICENSE)
 
-<a id="secao-7"></a>
-## 🔒 Sigilo e limitações
+---
 
-- Os subagentes rodam no mesmo serviço do Claude Code, na nuvem. As regras de sigilo do texto são instruções ao modelo, não uma barreira técnica: **não cole dados de clientes ou segredos** sem decidir conscientemente que podem ser processados.
-- A skill pede que o modelo cite fonte, não invente fatos e trate peças como minutas. Isso reduz erros, mas não os elimina: confira sempre.
-- O agente `consultor` também pode ser acionado fora da skill, pela descrição dele (falha repetida, decisão de arquitetura). Se quiser só a invocação explícita, apague a segunda frase da `description` dele.
-- A skill só deve disparar quando você a invoca. A restrição está na `description`. Para travar tecnicamente, acrescente `disable-model-invocation: true` ao frontmatter da skill e confirme que `/consultor-primeiro` ainda funciona no seu aplicativo.
-- A seção "Regras de segurança" da skill traz um padrão voltado a trabalho jurídico (não inventar, sigilo, minuta). Edite-a para o seu contexto.
-- Modelos: aliases `fable`, `opus`, `sonnet` e `haiku`, que precisam estar disponíveis no seu plano.
-
-
-<a id="documentacao"></a>
-## 📚 Links para continuar
-
-- [Fluxo da skill](skills/consultor-primeiro/SKILL.md)
-- [Consultor](agents/consultor.md)
-- [Trabalhador](agents/trabalhador.md)
-- [Tarefa simples](agents/tarefa-simples.md)
-- [Instalador com backup](install.ps1)
-
-
-<a id="secao-8"></a>
-## 📄 Licença
-
-MIT. Veja `LICENSE`.
+Criado por [Lucas Barkoski](https://github.com/Barkoski).
