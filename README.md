@@ -1,10 +1,18 @@
-<p align="center"><img src="assets/banner.svg" alt="Consultor primeiro: estratégia antes da execução, conferência antes da entrega" width="100%"></p>
+<p align="center"><img src="assets/capa-consultor.png" alt="Consultor primeiro: estratégia antes da execução, conferência antes da entrega" width="100%"></p>
 
-<p align="center"><strong>Um fluxo de trabalho com agentes para o Claude Code.</strong><br>O consultor define a abordagem, os agentes executam e o responsável pela sessão confere a entrega.</p>
+<p align="center"><strong>Uma equipe de agentes, organizada para pensar, executar e conferir.</strong></p>
 
-<p align="center"><a href="#comece-aqui">Comece aqui</a> · <a href="#como-funciona">Como funciona</a> · <a href="#exemplos">Exemplos</a> · <a href="#instalação">Instalação</a> · <a href="#limites-e-cuidados">Limites e cuidados</a></p>
+<p align="center">Skill gratuita e de código aberto para o Claude Code<br>por <a href="https://github.com/Barkoski">Lucas Barkoski</a></p>
+
+<p align="center"><a href="#instalação"><strong>Instalar a skill</strong></a> &nbsp; · &nbsp; <a href="#como-funciona">Como funciona</a> &nbsp; · &nbsp; <a href="#exemplos">Ver exemplos</a> &nbsp; · &nbsp; <a href="#limites-e-cuidados">Limites e cuidados</a></p>
 
 ---
+
+## O que é?
+
+O **Consultor Primeiro** é uma skill que organiza tarefas no Claude Code com a ajuda de agentes. Antes de executar, um consultor analisa o problema e define uma estratégia. Em seguida, os agentes necessários trabalham no que foi pedido e o responsável pela sessão confere a entrega.
+
+Ela pode ajudar a revisar textos e peças, organizar documentos, planejar projetos e resolver problemas técnicos. A skill é **gratuita**; o acesso ao Claude Code e aos modelos depende do plano e da configuração de cada pessoa.
 
 ## Comece aqui
 
@@ -18,7 +26,7 @@ Inclua restrições, tentativas anteriores e erros relevantes quando existirem. 
 
 ## Como funciona
 
-<p align="center"><img src="assets/fluxo.svg" alt="Briefing, estratégia, execução e conferência" width="100%"></p>
+<p align="center"><img src="assets/etapas-consultor.svg" alt="Briefing, estratégia, execução e conferência" width="100%"></p>
 
 1. **Briefing:** o agente principal reúne o objetivo e as informações necessárias.
 2. **Estratégia:** o consultor examina o problema e indica a abordagem e as tarefas delegáveis.
