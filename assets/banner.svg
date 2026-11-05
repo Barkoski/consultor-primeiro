@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-label="consultor-primeiro: Estratégia antes da execução. Conferência antes da entrega.">
-<rect width="1200" height="380" rx="24" fill="#f3f1eb"/><path d="M895 0H1176Q1200 0 1200 24V356Q1200 380 1176 380H895Z" fill="#5c8094"/>
-<circle cx="1070" cy="105" r="130" fill="none" stroke="#fff" stroke-opacity=".18"/><circle cx="1070" cy="105" r="88" fill="none" stroke="#fff" stroke-opacity=".23"/>
-<path d="M970 260h130m-105 22h105m-80 22h80" stroke="#fff" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/>
-<g font-family="Segoe UI,Arial,sans-serif"><text x="52" y="57" font-size="16" letter-spacing="2.5" font-weight="600" fill="#5c8094">ORQUESTRAÇÃO DE AGENTES</text>
-<text x="52" y="127" font-size="43" font-weight="700" fill="#304959">consultor-primeiro</text><text x="52" y="171" font-size="22" fill="#536775">Estratégia antes da execução. Conferência antes da entrega.</text>
-<path d="M52 202h770" stroke="#d6dbd5"/><text x="52" y="244" font-size="18" fill="#536775">LUCAS BARKOSKI</text><text x="52" y="275" font-size="18" fill="#536775">Ferramentas para ler, organizar e trabalhar melhor.</text>
-<rect x="52" y="309" width="370" height="35" rx="17" fill="#e4e9e3"/><text x="72" y="332" font-size="16" fill="#3e5c5c">github.com/Barkoski</text><text x="947" y="166" font-size="63" font-weight="600" fill="#fff">B.</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">Consultor primeiro</title><desc id="desc">Estratégia antes da execução. Conferência antes da entrega.</desc>
+<rect width="1200" height="360" rx="24" fill="#e9efeb"/><path d="M0 290C190 240 320 354 530 301S927 222 1200 277V360H0Z" fill="#dce7df"/>
+<rect x="65" y="58" width="8" height="238" rx="4" fill="#638a79"/><text x="100" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" letter-spacing="4" fill="#536f63">UM FLUXO PARA CLAUDE CODE</text>
+<text x="96" y="181" font-family="Georgia, serif" font-size="67" fill="#263f36">consultor primeiro</text><text x="101" y="231" font-family="Arial, sans-serif" font-size="25" fill="#506a5e">Estratégia antes da execução.</text><text x="101" y="266" font-family="Arial, sans-serif" font-size="25" fill="#506a5e">Conferência antes da entrega.</text>
+<circle cx="1017" cy="176" r="103" fill="#d2e2d8"/><circle cx="1017" cy="176" r="72" fill="none" stroke="#729584" stroke-width="2"/><path d="M969 187l31 24 63-70" fill="none" stroke="#567b69" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="1097" cy="96" r="8" fill="#a9c5b4"/>
+</svg>
