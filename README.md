@@ -10,72 +10,94 @@
 
 ## O que é?
 
-O **Consultor Primeiro** é uma skill que organiza tarefas no Claude Code com a ajuda de agentes. Antes de executar, um consultor analisa o problema e define uma estratégia. Em seguida, os agentes necessários trabalham no que foi pedido e o responsável pela sessão confere a entrega.
+O **Consultor Primeiro** é uma instrução pronta para o Claude Code trabalhar de forma mais organizada. Ele é uma *skill*: pense nela como um roteiro de trabalho que você instala uma vez e usa sempre que precisar.
 
-Ela pode ajudar a revisar textos e peças, organizar documentos, planejar projetos e resolver problemas técnicos. A skill é **gratuita**; o acesso ao Claude Code e aos modelos depende do plano e da configuração de cada pessoa.
+Você faz o pedido em português normal. A ferramenta orienta o Claude a primeiro pensar no caminho, depois fazer o trabalho e, por fim, conferir a entrega.
 
-## Comece aqui
+**Um exemplo:** você pede para revisar uma petição. O consultor analisa o que precisa ser verificado; os agentes necessários examinam a peça; e o responsável pela sessão confere o resultado e apresenta os pontos de atenção. A revisão do advogado continua indispensável.
 
-Depois de instalar a skill e os agentes, abra uma nova sessão do Claude Code e escreva:
+**A skill é gratuita e tem código aberto.** Para usá-la, é necessário ter acesso ao Claude Code. O serviço e os modelos podem ter custos ou limites, conforme o plano e a configuração de cada pessoa.
+
+## Como usar
+
+Depois de [instalar](#instalação), abra uma nova sessão do Claude Code. Digite `/consultor-primeiro`, dê um espaço e escreva seu pedido. Por exemplo:
 
 ```text
-/consultor-primeiro Descreva a tarefa, onde estão os arquivos e o resultado esperado.
+/consultor-primeiro Revise a petição que está na pasta Documentos.
+Aponte os argumentos que precisam de mais provas e o que devo conferir.
 ```
 
-Inclua restrições, tentativas anteriores e erros relevantes quando existirem. Quanto mais claro o objetivo, mais útil será o briefing para o consultor.
+Pronto! Para ajudar, diga **o que você quer**, **onde estão os arquivos** e **como deseja receber o resultado**. Se estiver falando sobre um documento, indique o arquivo correto e peça que a resposta cite as páginas ou os IDs.
 
-## Como funciona
+## O que acontece depois do pedido?
 
 <p align="center"><img src="assets/etapas-consultor.svg" alt="Briefing, estratégia, execução e conferência" width="100%"></p>
 
-1. **Briefing:** o agente principal reúne o objetivo e as informações necessárias.
-2. **Estratégia:** o consultor examina o problema e indica a abordagem e as tarefas delegáveis.
-3. **Execução:** os agentes necessários trabalham dentro do escopo definido. O consultor também pode executar quando considerar adequado.
-4. **Conferência:** o agente principal verifica o resultado e informa o que foi ou não validado.
+1. **Entender:** o Claude reúne as informações necessárias para a tarefa.
+2. **Planejar:** um agente consultor examina o pedido e indica como abordá-lo.
+3. **Fazer:** os agentes necessários executam as partes do trabalho. O consultor também pode executar uma tarefa.
+4. **Conferir:** o agente principal verifica a entrega e informa o que foi ou não validado.
 
-Se um papel não estiver disponível, a skill orienta informar isso antes de continuar. Para tarefas de projeto ou arquitetura, o resultado inicial é uma especificação; a construção depende da aprovação do usuário.
+Os agentes são instruções para diferentes funções dentro do Claude Code. Se algum deles não estiver disponível, a skill orienta informar isso antes de continuar. A conferência da IA **não garante** que o resultado esteja correto.
 
-### Papéis
+## Exemplos para copiar e adaptar
 
-| Papel | Responsabilidade | Modelo configurado |
-| --- | --- | --- |
-| **Consultor** | Diagnóstico, estratégia e, quando adequado, execução | Opus; a skill orienta tentar Fable antes, quando disponível |
-| **Trabalhador** | Implementação, testes, correções e redação | Sonnet |
-| **Tarefa simples** | Busca, listagem e organização de informações, em modo somente leitura | Haiku |
-| **Principal** | Briefing, distribuição, conferência e entrega | Modelo da sessão |
+Substitua as referências aos arquivos pelos documentos que você pretende usar. Antes de compartilhar dados de clientes, leia os [cuidados com sigilo](#limites-e-cuidados).
 
-A disponibilidade e o custo dependem do plano e da configuração. A skill não mede nem garante economia.
-
-## Exemplos
-
-**Analisar um processo**
+### Entender um processo
 
 ```text
-/consultor-primeiro Analise os documentos indicados. Organize a cronologia,
-os requisitos, as provas que faltam e os pontos fracos da tese. Cite a origem
-de cada informação e indique o que não consta nos documentos.
+/consultor-primeiro Leia o PDF que indiquei e faça uma linha do tempo do
+processo. Para cada acontecimento, informe a data, o que aconteceu e a
+página ou o ID do documento. Se uma informação não estiver clara, avise.
 ```
 
-**Revisar uma peça**
+### Revisar uma petição antes do protocolo
 
 ```text
-/consultor-primeiro Revise a petição indicada. Aponte os pontos fracos,
-o provável contra-argumento do INSS ou do juízo e o que preciso confirmar.
+/consultor-primeiro Revise a petição que indiquei. Veja se os fatos narrados
+estão apoiados nos documentos, aponte argumentos frágeis e diga o que o INSS
+ou o juiz poderiam questionar. Não invente informações e cite as fontes.
 ```
 
-**Corrigir um programa**
+### Conferir o que falta para um pedido
 
 ```text
-/consultor-primeiro Corrija o erro de login no projeto indicado. O erro ocorre
-ao renovar o token. Verifique a causa, rode os testes adequados e informe
-as limitações da verificação.
+/consultor-primeiro Leia os documentos que indiquei e faça uma tabela com:
+o que cada documento comprova, o que ainda precisa ser esclarecido e quais
+documentos podem estar faltando. Informe a página ou o ID de cada fonte.
 ```
 
-**Planejar uma solução**
+### Organizar um processo administrativo do INSS
 
 ```text
-/consultor-primeiro Projete uma automação para organizar documentos.
-Entregue uma especificação com etapas, riscos e verificações, sem construir.
+/consultor-primeiro Organize o processo administrativo que indiquei. Resuma
+o pedido, os documentos apresentados, as exigências e a decisão do INSS.
+Cite a página ou o ID de cada informação e destaque o que não consta.
+```
+
+### Preparar uma minuta para revisão
+
+```text
+/consultor-primeiro Com base apenas nos documentos indicados e na análise
+já feita, prepare uma minuta para minha revisão. Não invente fatos nem fontes.
+Marque com [VERIFICAR] o que depender da minha confirmação.
+```
+
+### Comparar o que dizem dois documentos
+
+```text
+/consultor-primeiro Compare os dois documentos que indiquei. Mostre em uma
+tabela os pontos em que concordam, as diferenças e o que precisa ser
+confirmado. Indique a página ou o ID de cada informação.
+```
+
+### Usar fora do trabalho jurídico
+
+```text
+/consultor-primeiro Leia os arquivos da pasta que indiquei e organize uma
+lista com o nome de cada documento e um resumo curto do seu conteúdo.
+Informe se algum arquivo não puder ser lido.
 ```
 
 ## Instalação
@@ -107,6 +129,20 @@ O instalador copia os arquivos para `~\.claude\` e faz backup dos arquivos exist
 - **Modelos:** a skill tenta chamar `fable`, depois `opus` e, se ambos falharem, o modelo padrão do agente, informando o usuário. Os aliases e a disponibilidade dependem do ambiente.
 - **Uso adequado:** a consulta inicial acrescenta etapas. Para tarefas triviais, pode ser mais prático trabalhar diretamente. Não há garantia de economia ou de ausência de erros.
 - **Invocação:** a descrição da skill pede uso apenas por `/consultor-primeiro`; o agente consultor também pode ser acionado em outras situações descritas em seu arquivo. Para restringir tecnicamente a invocação da skill, avalie `disable-model-invocation: true` e confirme o comportamento no seu ambiente.
+
+<details>
+<summary><strong>Detalhes para quem quer saber como os agentes são configurados</strong></summary>
+
+| Agente | Função | Modelo configurado |
+| --- | --- | --- |
+| Consultor | Analisa, orienta e também pode executar | Opus; a skill orienta tentar Fable primeiro quando disponível |
+| Trabalhador | Executa tarefas como redação, correções e testes | Sonnet |
+| Tarefa simples | Busca e organiza informações, sem editar arquivos | Haiku |
+| Principal | Organiza, acompanha e confere o trabalho | Modelo da sessão |
+
+A disponibilidade depende do ambiente e do plano. A skill não mede nem garante economia.
+
+</details>
 
 ## Arquivos e documentação
 
