@@ -1,7 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-<title id="title">Consultor primeiro</title><desc id="desc">Estratégia antes da execução. Conferência antes da entrega.</desc>
-<rect width="1200" height="360" rx="24" fill="#e9efeb"/><path d="M0 290C190 240 320 354 530 301S927 222 1200 277V360H0Z" fill="#dce7df"/>
-<rect x="65" y="58" width="8" height="238" rx="4" fill="#638a79"/><text x="100" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" letter-spacing="4" fill="#536f63">UM FLUXO PARA CLAUDE CODE</text>
-<text x="96" y="181" font-family="Georgia, serif" font-size="67" fill="#263f36">consultor primeiro</text><text x="101" y="231" font-family="Arial, sans-serif" font-size="25" fill="#506a5e">Estratégia antes da execução.</text><text x="101" y="266" font-family="Arial, sans-serif" font-size="25" fill="#506a5e">Conferência antes da entrega.</text>
-<circle cx="1017" cy="176" r="103" fill="#d2e2d8"/><circle cx="1017" cy="176" r="72" fill="none" stroke="#729584" stroke-width="2"/><path d="M969 187l31 24 63-70" fill="none" stroke="#567b69" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="1097" cy="96" r="8" fill="#a9c5b4"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Consultor primeiro: Primeiro pensar, depois fazer, por fim conferir.">
+ <defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1e3d"/><stop offset=".6" stop-color="#0f2547"/><stop offset="1" stop-color="#1a1f45"/></linearGradient>
+ <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f1d79c" stop-opacity=".22"/><stop offset="1" stop-color="#f1d79c" stop-opacity="0"/></radialGradient>
+ <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity=".05"/></pattern>
+ <style>
+ .serif{font-family:Georgia,'Times New Roman',serif}.sans{font-family:'Segoe UI',Inter,Arial,sans-serif}.mono{font-family:Consolas,'Cascadia Code',monospace}
+ @keyframes swing{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}.beam{animation:swing 7s ease-in-out infinite}
+ @keyframes dash{to{stroke-dashoffset:-24}}.flow{animation:dash 1.4s linear infinite}
+ @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cur{animation:blink 1.1s steps(1) infinite}
+</style></defs>
+ <rect width="1200" height="400" rx="24" fill="url(#bg)"/><rect width="1200" height="400" rx="24" fill="url(#dots)"/>
+ <rect x="1" y="1" width="1198" height="398" rx="23" fill="none" stroke="#d9b26a" stroke-opacity=".28"/>
+ <circle cx="930" cy="200" r="210" fill="url(#glow)"/>
+ <g fill="none" stroke="#d9b26a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" >
+    <path d="M890 140L780 260M930 150V260M970 140L1080 260" stroke-width="2" stroke-dasharray="4 8" class="flow"/>
+    <circle cx="930" cy="100" r="54" fill="#0f1b30"/><circle cx="930" cy="100" r="54" fill="#d9b26a" fill-opacity=".12"/>
+    <path d="M930 62v10M930 128v10M892 100h10M958 100h10" stroke-width="2.4"/>
+    <path d="M954 76L936 106L924 94Z" fill="#d9b26a" stroke-width="1.6"/><path d="M906 124L924 94L936 106Z" fill="#0f1b30" stroke-width="1.6"/><circle cx="930" cy="100" r="4" fill="#d9b26a" stroke="none"/>
+    <rect x="742" y="260" width="76" height="64" rx="12" fill="#0f1b30"/><rect x="742" y="260" width="76" height="64" rx="12" fill="#d9b26a" fill-opacity=".08"/><circle cx="780" cy="284" r="9"/><path d="M764 312q16-18 32 0" stroke-width="2.6"/><rect x="892" y="260" width="76" height="64" rx="12" fill="#0f1b30"/><rect x="892" y="260" width="76" height="64" rx="12" fill="#d9b26a" fill-opacity=".08"/><circle cx="930" cy="284" r="9"/><path d="M914 312q16-18 32 0" stroke-width="2.6"/><rect x="1042" y="260" width="76" height="64" rx="12" fill="#0f1b30"/><rect x="1042" y="260" width="76" height="64" rx="12" fill="#d9b26a" fill-opacity=".08"/><circle cx="1080" cy="284" r="9"/><path d="M1064 312q16-18 32 0" stroke-width="2.6"/>
+    <circle cx="1110" cy="80" r="24" fill="#0f1b30"/><path d="M1098 80l8 9 16-18" stroke-width="3.6"/>
+    <path d="M990 90Q1050 50 1086 74" stroke-width="2" stroke-dasharray="4 8"/></g>
+ <g class="sans"><path d="M64 70h28" stroke="#d9b26a" stroke-width="2"/><text x="102" y="76" font-size="14" font-weight="600" letter-spacing="3" fill="#d9b26a">SKILL PARA CLAUDE CODE</text></g>
+ <text x="62" y="148" class="serif" font-size="52" font-weight="700" fill="#e9eef7">Consultor primeiro</text>
+ <g class="sans" font-size="22" fill="#a9b6cc"><text x="64" y="196">Primeiro pensar, depois fazer,</text><text x="64" y="228">por fim conferir.</text></g>
+ <g class="sans"><rect x="64" y="286" width="118" height="32" rx="16" fill="#d9b26a" fill-opacity=".10" stroke="#d9b26a" stroke-opacity=".45"/><text x="123" y="307" font-size="15" fill="#f1d79c" text-anchor="middle">Estratégia</text><rect x="192" y="286" width="93" height="32" rx="16" fill="#d9b26a" fill-opacity=".10" stroke="#d9b26a" stroke-opacity=".45"/><text x="238.5" y="307" font-size="15" fill="#f1d79c" text-anchor="middle">Agentes</text><rect x="295" y="286" width="126" height="32" rx="16" fill="#d9b26a" fill-opacity=".10" stroke="#d9b26a" stroke-opacity=".45"/><text x="358" y="307" font-size="15" fill="#f1d79c" text-anchor="middle">Conferência</text></g>
+ <text x="64" y="360" class="sans" font-size="13" letter-spacing="2.5" fill="#a9b6cc" fill-opacity=".8">LUCAS BARKOSKI  ·  GITHUB.COM/BARKOSKI</text>
 </svg>

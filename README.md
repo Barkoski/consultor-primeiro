@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/capa-consultor.png" alt="Consultor primeiro: estratégia antes da execução" width="100%"></p>
+<p align="center"><img src="assets/banner.svg" alt="Consultor primeiro: primeiro pensar, depois fazer, por fim conferir" width="100%"></p>
 
 <p align="center"><strong>Primeiro pensar, depois fazer, por fim conferir.</strong><br>
 Skill gratuita e de código aberto para o Claude Code.</p>
